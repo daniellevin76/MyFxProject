@@ -33,14 +33,7 @@ public class ImageObject {
 
     }
 
-    public static void main(String[] args) {
-
-        // File outputFile = new File("temp/outputFile.png");
-        ImageObject imgObj = new ImageObject();
-        BufferedImage bufferedImage = imgObj.readImage();
-        ImageView imageView = new ImageView();
-        imageView.setImage(bufferedImage);
 
     }
 
-}
+

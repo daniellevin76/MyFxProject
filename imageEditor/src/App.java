@@ -18,6 +18,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
@@ -33,94 +34,75 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        final FileChooser fileChooser = new FileChooser();
-        final Button openButton = new Button("Open Image");
+        FileChooser fileChooser = new FileChooser();
 
-        openButton.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(final ActionEvent e) {
-                setExtFilters(fileChooser);
-                File file = fileChooser.showOpenDialog(primaryStage);
-                if (file != null) {
-                    openNewImageWindow(file);
-                }
-            }
-        });
-
-        StackPane root = new StackPane();
-        root.getChildren().add(openButton);
+       // ImageView imageView = new ImageView("kol.jpg");
+        final Button loadButton = new Button("Load Image");
+        VBox root = new VBox();
+        HBox menuContainer = new HBox();
+        VBox imageContainer = new VBox();
+        Button magnifyButton = new Button("Magnify");
+        Button shrinkButton = new Button("Shrink");
+        Button mirrorButton = new Button("Mirror");
+        menuContainer.getChildren().addAll(loadButton, magnifyButton, shrinkButton, mirrorButton);
+        root.getChildren().addAll(menuContainer,imageContainer);
+       // imageContainer.getChildren().add(imageView);
 
         Scene scene = new Scene(root, 486, 564);
 
         primaryStage.setTitle("Image Editor");
         primaryStage.setScene(scene);
+
+
+        loadButton.setOnAction(
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(final ActionEvent e) {
+                        File file = fileChooser.showOpenDialog(primaryStage);
+
+                        if (file != null) {
+                            print(file);
+                            //openFile(file);
+                            Image image = new Image(file.toURI().toString());
+                            ImageView imageView = new ImageView(image);
+                            //print("test image: " + image);
+                            imageView.setImage(image);
+                            imageContainer.getChildren().add(imageView);
+                        }
+                    }
+                });
+
         primaryStage.show();
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
 
     private void setExtFilters(FileChooser chooser) {
         chooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("All Images", "*.*"),
                 new FileChooser.ExtensionFilter("PNG", "*.png"));
     }
 
-    private void openNewImageWindow(File file) {
-        Stage secondStage = new Stage();
 
-        MenuBar menuBar = new MenuBar();
-        Menu menuFile = new Menu("File");
-        MenuItem menuItem_Save = new MenuItem("Save Image");
-        menuFile.getItems().addAll(menuItem_Save);
-        menuBar.getMenus().addAll(menuFile);
+/*
 
-        Label name = new Label(file.getAbsolutePath());
-        Image image = new Image(file.toURI().toString());
-        ImageView imageView = new ImageView();
-
-        menuItem_Save.setOnAction(new EventHandler<ActionEvent>() {
-
-            @Override
-            public void handle(ActionEvent event) {
-                FileChooser fileChooser = new FileChooser();
-                fileChooser.setTitle("Save Image");
-
-                File file = fileChooser.showSaveDialog(secondStage);
-                if (file != null) {
-                    try {
-                        ImageIO.write(SwingFXUtils.fromFXImage(imageView.getImage(), null), "png", file);
-                    } catch (IOException ex) {
-                        print("Error: " + ex);
-                        // Logger.getLogger(JavaFXImageFileChooser.class.getName()).log(Level.SEVERE,
-                        // null, ex);
-                    }
-                }
-            }
-
-            private void print(Object obj) {
-                System.out.println(obj);
-            }
-        });
-
-        final VBox vbox = new VBox();
-        vbox.setAlignment(Pos.CENTER);
-        vbox.setSpacing(10);
-        vbox.setPadding(new Insets(0, 10, 0, 10));
-        vbox.getChildren().addAll(name, imageView);
-
-        imageView.setFitHeight(400);
-        imageView.setPreserveRatio(true);
-        imageView.setImage(image);
-        imageView.setSmooth(true);
-        imageView.setCache(true);
-
-        Scene scene = new Scene(new VBox(), 400, 350);
-        ((VBox) scene.getRoot()).getChildren().addAll(menuBar, vbox);
-
-        secondStage.setTitle(file.getName());
-        secondStage.setScene(scene);
-        secondStage.show();
+    private void openFile(File file) {
+        try {
+            Desktop.getDesktop().open(file);
+        } catch (IOException ex) {
+            Logger.getLogger(
+                    App.class.getName()).log(
+                    Level.SEVERE, null, ex
+            );
+        }
+    }
+*/
+    private void print(Object obj) {
+        System.out.println(obj);
     }
 
-}
+    public static void main(String[] args) {
+
+        launch(args);
+    }
+
+
+    }
