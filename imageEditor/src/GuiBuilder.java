@@ -1,4 +1,5 @@
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -23,10 +24,8 @@ public class GuiBuilder extends Application {
 
 
     public GuiBuilder(){
-      //
-        //  image = new Image("kol.jpg");
-        imageView = new ImageView();
 
+        imageView = new ImageView();
 
     }
 
@@ -124,7 +123,6 @@ public class GuiBuilder extends Application {
                     @Override
                     public void handle(ActionEvent actionEvent) {
                         // magnifying image view
-
 
                         imageView = ImageManipulator.rotateImage(imageView);
 

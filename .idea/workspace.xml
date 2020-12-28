@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="840d3bfe-0e4c-4a22-bd42-60d7ef1f1ced" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imageEditor/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageEditor/src/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageEditor/src/ImageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/ImageObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/App$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/ImageObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/ImageObject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/ImageManipulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/ImageManipulator.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +66,7 @@
       <updated>1608913914881</updated>
       <workItem from="1608913919366" duration="21878000" />
       <workItem from="1609056864381" duration="25445000" />
-      <workItem from="1609140718950" duration="2111000" />
+      <workItem from="1609140718950" duration="8274000" />
     </task>
     <servers />
   </component>
