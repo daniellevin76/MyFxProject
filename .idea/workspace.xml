@@ -55,6 +55,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -66,7 +77,8 @@
       <updated>1608913914881</updated>
       <workItem from="1608913919366" duration="21878000" />
       <workItem from="1609056864381" duration="25445000" />
-      <workItem from="1609140718950" duration="8274000" />
+      <workItem from="1609140718950" duration="14651000" />
+      <workItem from="1609225805856" duration="14471000" />
     </task>
     <servers />
   </component>

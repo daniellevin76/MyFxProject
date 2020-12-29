@@ -1,18 +1,26 @@
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.OutputStream;
+import java.nio.file.Files;
+
 import javafx.application.Application;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import javax.imageio.ImageIO;
 
 
 public class GuiBuilder extends Application {
@@ -110,6 +118,8 @@ public class GuiBuilder extends Application {
                     public void handle(ActionEvent actionEvent) {
                         // magnifying image view
 
+
+
                         imageView = ImageManipulator.resizeImage(imageView, image, -0.05);
 
                     }
@@ -122,10 +132,7 @@ public class GuiBuilder extends Application {
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
-                        // magnifying image view
-
-                        imageView = ImageManipulator.rotateImage(imageView);
-
+                    //ImageManipulator.changeColor(image);
 
                     }
                 }
@@ -139,7 +146,7 @@ public class GuiBuilder extends Application {
                     @Override
                     public void handle(ActionEvent actionEvent) {
 
-                        ImageManipulator.changeColor(image);
+                        ImageManipulator.changeColor(image, 5,10);
                     }
                 }
         );

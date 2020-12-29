@@ -1,40 +1,37 @@
+import javafx.scene.image.*;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.image.PixelReader;
-import javafx.scene.image.WritableImage;
+import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
-import javafx.scene.transform.Scale;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.*;
 
-public class ImageManipulator {
 
+public abstract class ImageManipulator {
+   static public Color color;
+
+    static public PixelWriter pixelWriter;
     static int counter = 0;
     FileChooser fileChooser;
     File file;
     Stage primaryStage;
-   // static Image image;
-  //  static ImageView imageView;
+    // static Image image;
+    //  static ImageView imageView;
 
-
-    public ImageManipulator() {
-
-    }
 
 
     public static ImageView resizeImage(ImageView imageView, Image image, double resizingFactor) {
 
-      //  imageView.getFitWidth();
+        //  imageView.getFitWidth();
         print("counter: " + counter);
-        double imageWidth = image.getWidth() ;
+        double imageWidth = image.getWidth();
 
-        if (resizingFactor > 0){
+        if (resizingFactor > 0) {
             counter++;
 
-        } else{
+        } else {
             counter--;
 
         }
@@ -43,7 +40,7 @@ public class ImageManipulator {
 
         imageView.setPreserveRatio(true);
         imageView.setSmooth(true);
-    //
+        //
         //    imageView.setCache(true);
 
 
@@ -58,29 +55,84 @@ public class ImageManipulator {
     public static ImageView rotateImage(ImageView imageView) {
 
 
-        imageView.getTransforms().add(new Rotate(30, 50, 30));
-                /*
-                * imageView.setTranslateZ(imageView.getBoundsInLocal().getWidth() / 2.0);
+        //  imageView.getTransforms().add(new Rotate(30, 50, 30));
+
+        // imageView.setTranslateZ(imageView.getBoundsInLocal().getWidth() / 2.0);
         imageView.setRotationAxis(Rotate.Y_AXIS);
-        imageView.setImage(image);*/
+        // imageView.setImage(image);
 
 
         return imageView;
     }
 
-    public static void changeColor(Image image) {
+    public static void changeColor(Image image, int i, int j) {
+        String oneColor ;
 
-        int imageWidth = (int) image.getWidth();
-        int imageHeight = (int) image.getHeight();
+      ArrayList<Double> colorList = getRGB_PixelValues(image);
+      colorList.add(0.50);
+        colorList.add(0.40);
+        colorList.add(0.60);
 
-        WritableImage outPutImage = new WritableImage(imageWidth, imageHeight);
-        PixelReader reader = image.getPixelReader();
-        //   PixelWriter writer = image.getPixelWriter();
-        print(reader.getArgb(5, 5));
-        print(reader.getColor(5, 5));
-        print(reader.getPixelFormat());
-        // int ob = (int) oldColor.getBlue()*255;
-        // int or = (int) oldColor.getRed()*255;
-        //int og = (int) oldColor.getBreen()*255;
+      oneColor = returnRGB_MaxValue(colorList);
+       changePixelColor(oneColor, i, j);
+       print("oneColor value: " + oneColor);
     }
+
+    private static void changePixelColor(String colorString, int i, int j) {
+        switch(colorString){
+        case "red": setPixelColor("red", i, j);
+        case "blue": setPixelColor("blue", i, j);
+        case "green": setPixelColor("green", i, j);
+        default: setPixelColor("black", i, j);
+    }
+    }
+
+    private static void setPixelColor(String RGB_color, int i, int j) {
+        switch(RGB_color){
+            case "red":
+                color = Color.RED;
+                pixelWriter.setColor(i,j,color);;
+            case "blue":
+                color = Color.BLUE;
+                pixelWriter.setColor(i,j,color);;
+            case "green":
+                color = Color.GREEN;
+                pixelWriter.setColor(i,j,color);;
+            default:  color = Color.BLACK;
+                pixelWriter.setColor(i,j,color);;
+        }
+    }
+
+
+    private static String returnRGB_MaxValue(ArrayList<Double> colorList) {
+        // red, green, blue
+        Double answer = colorList.get(0); // set answer to red
+        String colorString = "red";
+        // if the value of red is less than the value for green, set answer green
+        if(colorList.get(0)<colorList.get(1)){
+            answer = colorList.get(1);
+            colorString = "green";
+        }
+        if(answer < colorList.get(2)){
+            //answer = colorList.get(2);
+            colorString = "blue";
+        }
+        return colorString;
+
+    }
+
+    private static ArrayList<Double> getRGB_PixelValues(Image image) {
+        Color color = new Color(0, 0, 0, 0);
+        PixelReader reader = image.getPixelReader();
+        color = reader.getColor(125,125);
+        ArrayList<Double> colorList = new ArrayList<Double>();
+        colorList.add(color.getRed());
+        colorList.add(color.getGreen());
+        colorList.add(color.getBlue());
+        return colorList;
+
+
+    }
+
+
 }
