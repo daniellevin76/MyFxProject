@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageEditor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$3.class" afterDir="false" />
@@ -55,17 +56,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,6 +69,7 @@
       <workItem from="1609056864381" duration="25445000" />
       <workItem from="1609140718950" duration="14651000" />
       <workItem from="1609225805856" duration="14471000" />
+      <workItem from="1609265774441" duration="11449000" />
     </task>
     <servers />
   </component>

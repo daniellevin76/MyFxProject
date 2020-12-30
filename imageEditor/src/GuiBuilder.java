@@ -1,31 +1,25 @@
 
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.OutputStream;
-import java.nio.file.Files;
 
 import javafx.application.Application;
-import javafx.embed.swing.SwingFXUtils;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.SnapshotParameters;
+
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.WritableImage;
+
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
+
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-import javax.imageio.ImageIO;
-
-
 public class GuiBuilder extends Application {
-    ImageView imageView;
-    Image image;
+    static ImageView imageView;
+   static Image image;
     FileChooser fileChooser;
     File file;
     Stage primaryStage;
@@ -34,6 +28,7 @@ public class GuiBuilder extends Application {
     public GuiBuilder(){
 
         imageView = new ImageView();
+
 
     }
 
@@ -125,20 +120,21 @@ public class GuiBuilder extends Application {
                     }
                 }
         );
-        // Button to mirror the image
+        // Button to rotate the image
         Button rotateButton = new Button("Rotate");
 
         rotateButton.setOnAction(
                 new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent actionEvent) {
-                    //ImageManipulator.changeColor(image);
+                        imageView = ImageManipulator.rotateImage(imageView);
+
 
                     }
                 }
         );
 
-        // Button to mirror the image
+        // Button to change the color of the image
         Button colorButton = new Button("Change color");
 
         colorButton.setOnAction(
@@ -146,7 +142,9 @@ public class GuiBuilder extends Application {
                     @Override
                     public void handle(ActionEvent actionEvent) {
 
-                        ImageManipulator.changeColor(image, 5,10);
+                        imageView = ImageManipulator.changeColor(imageView);
+
+
                     }
                 }
         );
