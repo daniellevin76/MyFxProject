@@ -10,20 +10,21 @@ import java.util.*;
 
 
 public abstract class ImageManipulator {
-    static ImageView imageView;
+  //  static ImageView imageView;
 
-    static public PixelWriter pixelWriter;
+   // static public PixelWriter pixelWriter;
     static int counter = 0;
-    FileChooser fileChooser;
-    File file;
-    Stage primaryStage;
-    GuiBuilder gui = new GuiBuilder();
+    //FileChooser fileChooser;
+   // File file;
+   // Stage primaryStage;
+    //GuiBuilder gui = new GuiBuilder();
 
-
+    // resize image to either enlarge or minimize depending on the resizing factor argument and return
+    // the resized imageView
     public static ImageView resizeImage(ImageView imageView, Image image, double resizingFactor) {
 
         //  imageView.getFitWidth();
-        print("counter: " + counter);
+       // print("counter: " + counter);
         double imageWidth = image.getWidth();
 
         if (resizingFactor > 0) {
@@ -51,12 +52,14 @@ public abstract class ImageManipulator {
 
 
     public static ImageView rotateImage(ImageView imageView) {
+        print("test1");
 
-
-        imageView.getTransforms().add(new Rotate(30, 50, 30));
-
+        imageView.setRotate(imageView.getRotate() + 15);
+        //imageView.getTransforms().add(new Rotate(30, 50, 30));
+        print("test2");
         // imageView.setTranslateZ(imageView.getBoundsInLocal().getWidth() / 2.0);
-        imageView.setRotationAxis(Rotate.Y_AXIS);
+        imageView.setFitHeight(300);
+       // imageView.setRotationAxis(Rotate.Y_AXIS);
         // imageView.setImage(image);
 
 
