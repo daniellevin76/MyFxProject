@@ -99,7 +99,7 @@ public class GuiBuilder extends Application {
 
 
 
-                      File userManual = new File("imageEditor/test.png");
+                      File userManual = new File("imageEditor/userManual/userManual.pdf");
                       Desktop desktop = Desktop.getDesktop();
                         try {
                             desktop.open(userManual);
@@ -158,7 +158,7 @@ public class GuiBuilder extends Application {
         );
 
         // Button to change the color of the image
-        Button colorButton = new Button("Change color");
+        Button colorButton = new Button("Transform");
 
         colorButton.setOnAction(
                 new EventHandler<ActionEvent>() {
