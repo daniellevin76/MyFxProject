@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="840d3bfe-0e4c-4a22-bd42-60d7ef1f1ced" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/imageEditor/src/userManual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imageEditor/test.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imageEditor/userManual/kol.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/imageEditor/userManual/test.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageEditor/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageEditor/src/kol.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/GuiBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/ImageManipulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/ImageManipulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/kol.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +33,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1m9luMbbGx1SupyTRvoXyZ2nJFg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -56,6 +63,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -69,7 +87,8 @@
       <workItem from="1609056864381" duration="25445000" />
       <workItem from="1609140718950" duration="14651000" />
       <workItem from="1609225805856" duration="14471000" />
-      <workItem from="1609265774441" duration="11449000" />
+      <workItem from="1609265774441" duration="12419000" />
+      <workItem from="1609406278609" duration="9786000" />
     </task>
     <servers />
   </component>
@@ -87,5 +106,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

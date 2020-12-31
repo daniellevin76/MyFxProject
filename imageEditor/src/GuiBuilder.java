@@ -1,5 +1,8 @@
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.channels.FileChannel;
+import java.awt.Desktop;
 
 import javafx.application.Application;
 
@@ -87,7 +90,27 @@ public class GuiBuilder extends Application {
                             }
                     }
                 });
+        //button to display use manual
+        Button manualButton = new Button("User manual");
+        manualButton.setOnAction(
+                new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent actionEvent) {
 
+
+
+                      File userManual = new File("imageEditor/test.png");
+                      Desktop desktop = Desktop.getDesktop();
+                        try {
+                            desktop.open(userManual);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+
+                    }
+                }
+        );
 
         // Button to magnify the image
         Button magnifyButton = new Button("Magnify");
@@ -151,7 +174,7 @@ public class GuiBuilder extends Application {
 
 
 
-        menuContainer.getChildren().addAll(loadButton, magnifyButton, minimizeButton, rotateButton, colorButton);
+        menuContainer.getChildren().addAll(manualButton, loadButton, magnifyButton, minimizeButton, rotateButton, colorButton);
         return menuContainer;
  }
 
