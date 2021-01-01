@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imageEditor/userManual/userManual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/userManual/userManual.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/ImageManipulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/ImageManipulator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/userManual.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <workItem from="1609265774441" duration="12419000" />
       <workItem from="1609406278609" duration="13220000" />
       <workItem from="1609441857362" duration="1311000" />
-      <workItem from="1609495029737" duration="6889000" />
+      <workItem from="1609495029737" duration="8726000" />
     </task>
     <servers />
   </component>

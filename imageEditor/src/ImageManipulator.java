@@ -89,7 +89,7 @@ public abstract class ImageManipulator {
 
                 pixelWriter.setColor(col,row,oneColor);
               //  wImage =  setPixelColor(imageView, image, oneColor, col, row);
-             
+
 
             }
         }
@@ -120,18 +120,16 @@ public abstract class ImageManipulator {
     private static Color returnRGB_MaxValue(ArrayList<Double> colorList) {
 
         // red, green, blue
-      Color color = Color.VIOLET;
+      Color color = Color.DARKRED;
         Double answer = colorList.get(0); // set answer to red
-
-        if (colorList.get(0).equals(colorList.get(1)) && colorList.get(1).equals(colorList.get(2))){
-           color =  Color.VIOLET;
-
+        if (colorList.get(0).equals(colorList.get(1)) & colorList.get(1).equals(colorList.get(2))){
+            color = Color.CORAL;
         }
 
         // if the value of red is less than the value of green, set colorString green
         if (colorList.get(0) < colorList.get(1)) {
             answer = colorList.get(1);
-            color = Color.RED;
+            color = Color.GREEN;
         }
         // Check the previous answer against blue, if value is less set colorString blue
         if (answer < colorList.get(2)) {

@@ -182,7 +182,6 @@ public class GuiBuilder extends Application {
     //create image container
     private VBox createImageContainer() {
         VBox imageContainer = new VBox();
-        print("test imageView i createImageContainer" + imageView);
         imageContainer.getChildren().add(imageView);
         return imageContainer;
     }
