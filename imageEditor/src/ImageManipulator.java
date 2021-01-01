@@ -2,29 +2,20 @@ import javafx.scene.image.*;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.transform.Rotate;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
 
-import java.io.File;
 import java.util.*;
 
 
 public abstract class ImageManipulator {
-  //  static ImageView imageView;
 
-   // static public PixelWriter pixelWriter;
     static int counter = 0;
-    //FileChooser fileChooser;
-   // File file;
-   // Stage primaryStage;
-    //GuiBuilder gui = new GuiBuilder();
+
 
     // resize image to either enlarge or minimize depending on the resizing factor argument and return
     // the resized imageView
     public static ImageView resizeImage(ImageView imageView, Image image, double resizingFactor) {
 
-        //  imageView.getFitWidth();
-       // print("counter: " + counter);
+
         double imageWidth = image.getWidth();
 
         if (resizingFactor > 0) {
@@ -39,8 +30,7 @@ public abstract class ImageManipulator {
 
         imageView.setPreserveRatio(true);
         imageView.setSmooth(true);
-        //
-        //    imageView.setCache(true);
+
 
 
         return imageView;
@@ -51,16 +41,30 @@ public abstract class ImageManipulator {
     }
 
 
+    // Takes in imageView as a parameter, makes a rotation of 5 degrees
+    // to imageView and returns the transformed imageView
     public static ImageView rotateImage(ImageView imageView) {
-        print("test1");
 
-        imageView.setRotate(imageView.getRotate() + 15);
-        //imageView.getTransforms().add(new Rotate(30, 50, 30));
-        print("test2");
-        // imageView.setTranslateZ(imageView.getBoundsInLocal().getWidth() / 2.0);
+
+
+
         imageView.setFitHeight(300);
-       // imageView.setRotationAxis(Rotate.Y_AXIS);
-        // imageView.setImage(image);
+        imageView.setPreserveRatio(true);
+
+        // instantiating the Rotate class.
+        Rotate rotate = new Rotate();
+
+        //setting properties for the rotate object.
+        rotate.setAngle(5);
+        rotate.setPivotX(50);
+        rotate.setPivotY(50);
+
+        //rotating the imageView
+        imageView.getTransforms().add(rotate);
+
+
+
+       // imageView.setRotate(value + 5);
 
 
         return imageView;
@@ -70,21 +74,26 @@ public abstract class ImageManipulator {
 
 
         Image image = imageView.getImage();
-        print(image);
-        String oneColor;
-        print(image.getWidth());
-        WritableImage wImage = null;
-        for (int col = 0; col < image.getWidth(); col++) {
 
-            for (int row = 0; row < image.getHeight(); row++) {
+        Color oneColor;
+        WritableImage wImage = new WritableImage((int) image.getWidth(), (int) image.getHeight());
+        PixelWriter pixelWriter = wImage.getPixelWriter();
+        for (int row = 0; row < image.getHeight(); row++) {
+
+            for (int col = 0; col < image.getWidth(); col++) {
 
 
                 ArrayList<Double> colorList = getRGB_PixelValues(image, col, row);
+
                 oneColor = returnRGB_MaxValue(colorList);
-              wImage =  setPixelColor(imageView, image, oneColor, col, row);
-                //    print("oneColor value: " + oneColor);
+
+                pixelWriter.setColor(col,row,oneColor);
+              //  wImage =  setPixelColor(imageView, image, oneColor, col, row);
+             
+
             }
         }
+
         imageView.setImage(wImage);
 
     return imageView;
@@ -93,7 +102,7 @@ public abstract class ImageManipulator {
 
     // get the color values of a pixel and return an arrayList with those values
     private static ArrayList<Double> getRGB_PixelValues(Image image, int col, int row) {
-        Color color = new Color(0, 0, 0, 0);
+        Color color;
 
         PixelReader reader = image.getPixelReader();
         color = reader.getColor(col, row);
@@ -108,22 +117,27 @@ public abstract class ImageManipulator {
 
     //Check which value in colorList is highest and return its corresponding color (String)
 
-    private static String returnRGB_MaxValue(ArrayList<Double> colorList) {
+    private static Color returnRGB_MaxValue(ArrayList<Double> colorList) {
 
         // red, green, blue
+      Color color = Color.VIOLET;
         Double answer = colorList.get(0); // set answer to red
-        String colorString = "red";
+
+        if (colorList.get(0).equals(colorList.get(1)) && colorList.get(1).equals(colorList.get(2))){
+           color =  Color.VIOLET;
+
+        }
+
         // if the value of red is less than the value of green, set colorString green
         if (colorList.get(0) < colorList.get(1)) {
             answer = colorList.get(1);
-            colorString = "green";
+            color = Color.RED;
         }
         // Check the previous answer against blue, if value is less set colorString blue
         if (answer < colorList.get(2)) {
-            //answer = colorList.get(2);
-            colorString = "blue";
+         color = Color.BLUE;
         }
-        return colorString;
+        return color;
 
     }
 
@@ -148,12 +162,13 @@ public abstract class ImageManipulator {
             case "blue":
                 color = Color.BLUE;
                 break;
-            default:
+            case "violet":
                 color = Color.DARKVIOLET;
                 break;
+            default: color = Color.VIOLET;
         }
 
-        pixelWriter.setColor(col, row, Color.YELLOW);
+        pixelWriter.setColor(col, row, color);
        // print(imageView);
 
        

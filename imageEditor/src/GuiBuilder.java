@@ -72,17 +72,18 @@ public class GuiBuilder extends Application {
 
                         file = fileChooser.showOpenDialog(primaryStage);
                         if (file != null) {
-                            // print(file);
 
+                            // read in image file
                             image = new Image(file.toURI().toString());
 
+                            // scale down the image to half to fit large images into the image container
                             double imageHeight = image.getHeight() * 0.5;
                             double imageWidth = image.getWidth() * 0.5;
 
+                            // update the image scaling down
                             image = new Image(file.toURI().toString(), imageWidth, imageHeight, false, false);
 
-                            print("test1 imageView" + imageView);
-
+                            // preserve ration between width and height
                             imageView.setPreserveRatio(true);
                             imageView.setImage(image);
 

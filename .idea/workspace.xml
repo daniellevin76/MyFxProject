@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="840d3bfe-0e4c-4a22-bd42-60d7ef1f1ced" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/GuiBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/src/ImageManipulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imageEditor/src/userManual.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imageEditor/userManual/userManual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/imageEditor/userManual/userManual.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/ImageManipulator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MyFxProject/ImageManipulator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MyFxProject/userManual.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,17 +55,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -79,6 +70,8 @@
       <workItem from="1609225805856" duration="14471000" />
       <workItem from="1609265774441" duration="12419000" />
       <workItem from="1609406278609" duration="13220000" />
+      <workItem from="1609441857362" duration="1311000" />
+      <workItem from="1609495029737" duration="6889000" />
     </task>
     <servers />
   </component>
